@@ -20,9 +20,9 @@ export default function Pagination({totalCount, currentPage, pageSize, onPageCha
       </div>
       {paginationRange.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
-          return <div key={pageNumber} className='dots'>&#8230;</div>;
+          return <div key={index} className='dots'>&#8230;</div>;
         }
-		
+
         return (
           <div
             key={index}

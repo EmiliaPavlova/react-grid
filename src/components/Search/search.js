@@ -28,7 +28,7 @@ export default function Search({ onSearch, results }) {
   }
 
   const renderSuggestionsPopup = (results) => {
-    if (results && results.status === 404) {
+    if (isNaN(results.length) || results.status === 404) {
       return (
         <div className='suggestions_wrapper'>No results found</div>
       )

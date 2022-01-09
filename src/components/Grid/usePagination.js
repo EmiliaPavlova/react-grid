@@ -20,7 +20,7 @@ export const usePagination = ({
     if (displayedPageNumbers >= totalPageCount) {
       return range(1, totalPageCount);
     }
-	
+
     const leftOptionsIndex = Math.max(currentPage - optionsCount, 1);
     const rightOptionsIndex = Math.min(currentPage + optionsCount, totalPageCount);
     const shouldShowLeftDots = leftOptionsIndex > 2;
